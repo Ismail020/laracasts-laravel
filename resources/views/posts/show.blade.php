@@ -56,5 +56,4 @@
         </main>
     </section>
     </body>
-
 </x-layout>
