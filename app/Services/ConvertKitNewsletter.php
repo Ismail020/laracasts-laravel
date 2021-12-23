@@ -6,6 +6,6 @@ class ConvertKitNewsletter implements Newsletter
 {
     public function subscribe() 
     {
-
+        // other mail server
     }
 }
