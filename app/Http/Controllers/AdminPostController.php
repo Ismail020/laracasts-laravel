@@ -26,6 +26,7 @@ class AdminPostController extends Controller
             'thumbnail' =>  request()->file('thumbnail')->store('thumbnails')
         ]);
 
+        $attributes['published_at'] = now();
         Post::create($attributes);
 
         return redirect('/');
@@ -40,7 +41,7 @@ class AdminPostController extends Controller
     {
         $attributes = request()->validate([
             'title' => 'required',
-            'thumbnail' => $post->exists ? ['image'] :['required', 'image'],
+            'thumbnail' => $post->exists ? ['image'] : ['required', 'image'],
             'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post)],
             'excerpt' => 'required',
             'body' => 'required',
@@ -69,12 +70,11 @@ class AdminPostController extends Controller
 
         return request()->validate([
             'title' => 'required',
-            'thumbnail' => $post->exists ? ['image'] :['required', 'image'],
+            'thumbnail' => $post->exists ? ['image'] : ['required', 'image'],
             'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post)],
             'excerpt' => 'required',
             'body' => 'required',
             'category_id' => ['required', Rule::exists('categories', 'id')],
-            'published_at' => 'required'
         ]);
     }
 }
