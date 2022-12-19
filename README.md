@@ -24,7 +24,7 @@ php artisan storage:link
 
 # ! When you are done with setting up the .env file proceed
 
-# Add a local database matching DB_DATABASE in .env — default: 'bijblits'
+# Add a local database matching DB_DATABASE in .env — default: 'laravel'
 
 # Migrate and seed the tables to your database
 php artisan migrate:fresh --seed
