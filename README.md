@@ -29,12 +29,6 @@ php artisan storage:link
 # Migrate and seed the tables to your database
 php artisan migrate:fresh --seed
 
-# Install NPM dependencies
-npm install
-
-# Compile styling assets (see scripts in package.json)
-npm run dev
-
 #### Start Environment
 php artisan serve
 ```
