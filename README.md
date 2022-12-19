@@ -29,9 +29,6 @@ php artisan storage:link
 # Migrate and seed the tables to your database
 php artisan migrate:fresh --seed
 
-# Publish assets for Laravel Nova
-php artisan nova:publish
-
 # Install NPM dependencies
 npm install
 
@@ -40,13 +37,6 @@ npm run dev
 
 #### Start Environment
 php artisan serve
-```
-#### Cronjob
-
-In order to randomize the restaurants u need to add a cronjob
-
-```
-php artisan schedule:run >> /dev/null 2>&1
 ```
 
 ##### Database
